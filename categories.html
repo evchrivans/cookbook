@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Категории рецептов — CookBook</title>
+    <meta name="description" content="Рецепты по категориям: завтраки, основные блюда, десерты, салаты, выпечка и напитки.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🍽️</span>
+                    <span class="logo-text">CookBook</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="recipes.html">Рецепты</a></li>
+                        <li><a href="categories.html">Категории</a></li>
+                        <li><a href="new-recipe.html">Новый рецепт</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Рецепты по <span style="color: var(--primary);">категориям</span></h1>
+            <p>Выбирайте по настроению, времени или ингредиентам</p>
+        </section>
+
+        <div class="categories-grid">
+            <a href="recipes.html?category=breakfast" class="category-card">
+                <h3 class="category-title">Завтраки</h3>
+                <p>Идеи для утреннего приёма пищи</p>
+                <div style="margin-top: 16px;">
+                    <span class="recipe-tag">Блины</span>
+                    <span class="recipe-tag">Омлеты</span>
+                    <span class="recipe-tag">Каши</span>
+                </div>
+            </a>
+
+            <a href="recipes.html?category=main" class="category-card">
+                <h3 class="category-title">Основные блюда</h3>
+                <p>Сытные блюда на обед и ужин</p>
+                <div style="margin-top: 16px;">
+                    <span class="recipe-tag">Паста</span>
+                    <span class="recipe-tag">Мясо</span>
+                    <span class="recipe-tag">Рыба</span>
+                </div>
+            </a>
+
+            <a href="recipes.html?category=salads" class="category-card">
+                <h3 class="category-title">Салаты</h3>
+                <p>Лёгкие и питательные салаты</p>
+                <div style="margin-top: 16px;">
+                    <span class="recipe-tag">Овощные</span>
+                    <span class="recipe-tag">С мясом</span>
+                    <span class="recipe-tag">Фруктовые</span>
+                </div>
+            </a>
+
+            <a href="recipes.html?category=desserts" class="category-card">
+                <h3 class="category-title">Десерты</h3>
+                <p>Сладкое для настроения</p>
+                <div style="margin-top: 16px;">
+                    <span class="recipe-tag">Торты</span>
+                    <span class="recipe-tag">Печенье</span>
+                    <span class="recipe-tag">Мороженое</span>
+                </div>
+            </a>
+
+            <a href="recipes.html?category=baking" class="category-card">
+                <h3 class="category-title">Выпечка</h3>
+                <p>Домашний хлеб и выпечка</p>
+                <div style="margin-top: 16px;">
+                    <span class="recipe-tag">Хлеб</span>
+                    <span class="recipe-tag">Пироги</span>
+                    <span class="recipe-tag">Булочки</span>
+                </div>
+            </a>
+
+            <a href="recipes.html?category=drinks" class="category-card">
+                <h3 class="category-title">Напитки</h3>
+                <p>Коктейли, смузи и чаи</p>
+                <div style="margin-top: 16px;">
+                    <span class="recipe-tag">Коктейли</span>
+                    <span class="recipe-tag">Смузи</span>
+                    <span class="recipe-tag">Лимонады</span>
+                </div>
+            </a>
+        </div>
+
+        <section class="text-center mt-4">
+            <h2 class="section-title">Не нашли нужную категорию?</h2>
+            <p class="mb-4">Используйте поиск по ингредиентам или времени приготовления</p>
+            <a href="recipes.html" class="btn">
+                <i class="fas fa-search"></i> Поиск рецептов
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CookBook</h3>
+                    <p>6 основных категорий, 200+ рецептов</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Популярные теги</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span class="recipe-tag">Вегетарианское</span>
+                        <span class="recipe-tag">Быстро</span>
+                        <span class="recipe-tag">Праздничное</span>
+                        <span class="recipe-tag">Здоровое</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 CookBook. Все рецепты проверены нашими поварами.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

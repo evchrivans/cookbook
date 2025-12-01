@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все рецепты — CookBook</title>
+    <meta name="description" content="Полная коллекция рецептов. Фильтруйте по времени, сложности и категориям.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🍽️</span>
+                    <span class="logo-text">CookBook</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="recipes.html">Рецепты</a></li>
+                        <li><a href="categories.html">Категории</a></li>
+                        <li><a href="new-recipe.html">Новый рецепт</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="recipes-grid">
+            <a href="recipe-pasta.html" class="recipe-card">
+                <img src="pasta.jpg" alt="Паста Карбонара" class="recipe-image">
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Паста Карбонара</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 25 мин</span>
+                        <span><i class="fas fa-user-friends"></i> 4 порции</span>
+                        <span><i class="fas fa-fire"></i> Средне</span>
+                    </div>
+                    <p class="recipe-desc">Классическая итальянская паста с беконом, сыром и яйцом.</p>
+                    <span class="recipe-tag">Итальянская</span>
+                    <span class="recipe-tag">Основное блюдо</span>
+                </div>
+            </a>
+
+            <a href="recipe-pancakes.html" class="recipe-card">
+                <img src="blin.jpg" alt="Американские блины" class="recipe-image">
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Американские блины</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 20 мин</span>
+                        <span><i class="fas fa-user-friends"></i> 2 порции</span>
+                        <span><i class="fas fa-fire"></i> Легко</span>
+                    </div>
+                    <p class="recipe-desc">Пушистые сладкие блины с кленовым сиропом и ягодами.</p>
+                    <span class="recipe-tag">Завтрак</span>
+                    <span class="recipe-tag">Сладкое</span>
+                </div>
+            </a>
+
+            <a href="recipe-salad.html" class="recipe-card">
+                <img src="salad.jpg" alt="Салат Цезарь" class="recipe-image">
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Салат Цезарь</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 15 мин</span>
+                        <span><i class="fas fa-user-friends"></i> 2 порции</span>
+                        <span><i class="fas fa-fire"></i> Легко</span>
+                    </div>
+                    <p class="recipe-desc">Хрустящий салат с курицей, сухариками и соусом Цезарь.</p>
+                    <span class="recipe-tag">Салаты</span>
+                    <span class="recipe-tag">Лёгкое</span>
+                </div>
+            </a>
+
+            <div class="recipe-card">
+                <img src="pizza.png" alt="Пицца Маргарита" class="recipe-image">
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Пицца Маргарита</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 40 мин</span>
+                        <span><i class="fas fa-user-friends"></i> 4 порции</span>
+                        <span><i class="fas fa-fire"></i> Средне</span>
+                    </div>
+                    <p class="recipe-desc">Классическая итальянская пицца с томатами и моцареллой.</p>
+                    <span class="recipe-tag">Итальянская</span>
+                    <span class="recipe-tag">Выпечка</span>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <img src="smuzi.jpg" alt="Смузи-боул" class="recipe-image">
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Ягодный смузи-боул</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 10 мин</span>
+                        <span><i class="fas fa-user-friends"></i> 1 порция</span>
+                        <span><i class="fas fa-fire"></i> Легко</span>
+                    </div>
+                    <p class="recipe-desc">Полезный завтрак с ягодами, орехами и мёдом.</p>
+                    <span class="recipe-tag">Здоровое</span>
+                    <span class="recipe-tag">Завтрак</span>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <img src="cake.jpg" alt="Шоколадный торт" class="recipe-image">
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Шоколадный торт</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 90 мин</span>
+                        <span><i class="fas fa-user-friends"></i> 8 порций</span>
+                        <span><i class="fas fa-fire"></i> Сложно</span>
+                    </div>
+                    <p class="recipe-desc">Нежный торт с шоколадным кремом и ягодами.</p>
+                    <span class="recipe-tag">Десерт</span>
+                    <span class="recipe-tag">Праздничное</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="categories.html" class="btn btn-secondary">
+                <i class="fas fa-list"></i> Смотреть по категориям
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CookBook</h3>
+                    <p>Всего рецептов: 200+</p>
+                    <p>Новых в этом месяце: 15</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Совет дня</h3>
+                    <p>Дайте мясу "отдохнуть" после приготовления — так оно будет сочнее.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 CookBook. Каждый рецепт проверен на кухне.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

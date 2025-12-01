@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить рецепт — CookBook</title>
+    <meta name="description" content="Поделитесь своим рецептом с сообществом CookBook.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🍽️</span>
+                    <span class="logo-text">CookBook</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="recipes.html">Рецепты</a></li>
+                        <li><a href="categories.html">Категории</a></li>
+                        <li><a href="new-recipe.html">Новый рецепт</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Поделитесь своим <span style="color: var(--primary);">рецептом</span></h1>
+            <p>Добавьте свой любимый рецепт в нашу коллекцию</p>
+        </section>
+
+        <div class="form-container">
+            <form id="recipe-form">
+                <div class="form-group">
+                    <label for="recipe-title" class="form-label">Название рецепта *</label>
+                    <input type="text" id="recipe-title" class="form-input" placeholder="Например: Сырные лепёшки" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="recipe-description" class="form-label">Краткое описание *</label>
+                    <textarea id="recipe-description" class="form-input" rows="3" placeholder="Расскажите, что это за блюдо, почему оно особое..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Категория *</label>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 8px;">
+                        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                            <input type="radio" name="category" value="breakfast" required>
+                            <span>🥞 Завтраки</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                            <input type="radio" name="category" value="main">
+                            <span>🍝 Основные блюда</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                            <input type="radio" name="category" value="salads">
+                            <span>🥗 Салаты</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                            <input type="radio" name="category" value="desserts">
+                            <span>🍰 Десерты</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                            <input type="radio" name="category" value="baking">
+                            <span>🥖 Выпечка</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                            <input type="radio" name="category" value="drinks">
+                            <span>🥤 Напитки</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                    <div class="form-group">
+                        <label for="prep-time" class="form-label">Время приготовления *</label>
+                        <input type="number" id="prep-time" class="form-input" placeholder="В минутах" min="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servings" class="form-label">Количество порций *</label>
+                        <input type="number" id="servings" class="form-input" placeholder="Например: 4" min="1" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="difficulty" class="form-label">Сложность *</label>
+                    <select id="difficulty" class="form-input" required>
+                        <option value="">Выберите сложность</option>
+                        <option value="easy">👶 Легко (для начинающих)</option>
+                        <option value="medium">👨‍🍳 Средняя (нужен опыт)</option>
+                        <option value="hard">👑 Сложно (для профи)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ingredients" class="form-label">Ингредиенты *</label>
+                    <p style="color: var(--gray); font-size: 14px; margin-bottom: 8px;">Перечислите каждый ингредиент с новой строки</p>
+                    <textarea id="ingredients" class="form-input" rows="6" placeholder="• 200 г муки
+• 2 яйца
+• 1 стакан молока
+• Соль по вкусу" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="instructions" class="form-label">Пошаговая инструкция *</label>
+                    <p style="color: var(--gray); font-size: 14px; margin-bottom: 8px;">Опишите каждый шаг подробно</p>
+                    <textarea id="instructions" class="form-input" rows="8" placeholder="Шаг 1: Смешайте сухие ингредиенты...
+Шаг 2: Добавьте яйца и молоко...
+Шаг 3: Выпекайте 20 минут..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo-url" class="form-label">Ссылка на фотографию (необязательно)</label>
+                    <input type="url" id="photo-url" class="form-input" placeholder="https://example.com/photo.jpg">
+                    <p style="color: var(--gray); font-size: 14px; margin-top: 8px;">Можно использовать ссылку на фото с Unsplash или другого сервиса</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="author" class="form-label">Ваше имя *</label>
+                    <input type="text" id="author" class="form-input" placeholder="Как к вам обращаться?" required>
+                </div>
+
+                <div style="display: flex; gap: 16px; margin-top: 32px;">
+                    <button type="submit" class="btn" style="flex: 1;">
+                        <i class="fas fa-paper-plane"></i> Опубликовать рецепт
+                    </button>
+                    <button type="reset" class="btn btn-secondary" style="flex: 1;">
+                        <i class="fas fa-redo"></i> Очистить форму
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="text-center mt-4">
+            <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 32px; border-radius: var(--radius);">
+                <h3 class="section-title">Что будет после отправки?</h3>
+                <p style="max-width: 600px; margin: 0 auto 24px;">Ваш рецепт пройдёт модерацию, после чего появится в общей коллекции. Вы получите уведомление на email.</p>
+                <a href="recipes.html" class="btn btn-secondary">
+                    <i class="fas fa-book-open"></i> Посмотреть все рецепты
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CookBook</h3>
+                    <p>Добавлено рецептов пользователями: 150+</p>
+                    <p>Среднее время модерации: 1-2 дня</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Правила публикации</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Требования к рецептам</a></li>
+                        <li><a href="#">Авторские права</a></li>
+                        <li><a href="#">Частые вопросы</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 CookBook. Спасибо, что делитесь своими рецептами!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('recipe-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const alertDiv = document.createElement('div');
+            alertDiv.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: var(--primary);
+                color: white;
+                padding: 20px 24px;
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+                z-index: 1000;
+                animation: slideIn 0.3s ease;
+            `;
+            
+            alertDiv.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <i class="fas fa-check-circle" style="font-size: 24px;"></i>
+                    <div>
+                        <h4 style="margin: 0 0 4px 0;">Рецепт отправлен!</h4>
+                        <p style="margin: 0; opacity: 0.9;">Спасибо за ваш вклад в CookBook.</p>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(alertDiv);
+            
+            setTimeout(() => {
+                alertDiv.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => alertDiv.remove(), 300);
+            }, 5000);
+            
+            this.reset();
+        });
+    </script>
+
+    <style>
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+    </style>
+</body>
+</html>
