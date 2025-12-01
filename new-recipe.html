@@ -53,27 +53,27 @@
                     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 8px;">
                         <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
                             <input type="radio" name="category" value="breakfast" required>
-                            <span>🥞 Завтраки</span>
+                            <span>Завтраки</span>
                         </label>
                         <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
                             <input type="radio" name="category" value="main">
-                            <span>🍝 Основные блюда</span>
+                            <span>Основные блюда</span>
                         </label>
                         <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
                             <input type="radio" name="category" value="salads">
-                            <span>🥗 Салаты</span>
+                            <span>Салаты</span>
                         </label>
                         <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
                             <input type="radio" name="category" value="desserts">
-                            <span>🍰 Десерты</span>
+                            <span>Десерты</span>
                         </label>
                         <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
                             <input type="radio" name="category" value="baking">
-                            <span>🥖 Выпечка</span>
+                            <span>Выпечка</span>
                         </label>
                         <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
                             <input type="radio" name="category" value="drinks">
-                            <span>🥤 Напитки</span>
+                            <span>Напитки</span>
                         </label>
                     </div>
                 </div>
@@ -94,9 +94,9 @@
                     <label for="difficulty" class="form-label">Сложность *</label>
                     <select id="difficulty" class="form-input" required>
                         <option value="">Выберите сложность</option>
-                        <option value="easy">👶 Легко (для начинающих)</option>
-                        <option value="medium">👨‍🍳 Средняя (нужен опыт)</option>
-                        <option value="hard">👑 Сложно (для профи)</option>
+                        <option value="easy">Легко (для начинающих)</option>
+                        <option value="medium">Средняя (нужен опыт)</option>
+                        <option value="hard">Сложно (для профи)</option>
                     </select>
                 </div>
 
@@ -139,11 +139,42 @@
             </form>
         </div>
 
-        <div class="text-center mt-4">
+                <div class="text-center mt-4">
             <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 32px; border-radius: var(--radius);">
-                <h3 class="section-title">Что будет после отправки?</h3>
-                <p style="max-width: 600px; margin: 0 auto 24px;">Ваш рецепт пройдёт модерацию, после чего появится в общей коллекции. Вы получите уведомление на email.</p>
-                <a href="recipes.html" class="btn btn-secondary">
+                <h3 class="section-title">Процесс публикации</h3>
+                <div style="display: flex; flex-direction: column; gap: 20px; max-width: 600px; margin: 0 auto 24px;">
+                    <div style="display: flex; align-items: center; gap: 16px; text-align: left;">
+                        <div style="background: var(--primary); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            1
+                        </div>
+                        <div>
+                            <h4 style="margin: 0 0 4px 0;">Отправка рецепта</h4>
+                            <p style="margin: 0; color: var(--gray); font-size: 14px;">Вы заполняете форму и отправляете рецепт</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 16px; text-align: left;">
+                        <div style="background: var(--primary); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            2
+                        </div>
+                        <div>
+                            <h4 style="margin: 0 0 4px 0;">Модерация</h4>
+                            <p style="margin: 0; color: var(--gray); font-size: 14px;">Наша команда проверяет рецепт на соответствие правилам</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 16px; text-align: left;">
+                        <div style="background: var(--primary); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            3
+                        </div>
+                        <div>
+                            <h4 style="margin: 0 0 4px 0;">Публикация</h4>
+                            <p style="margin: 0; color: var(--gray); font-size: 14px;">После проверки рецепт появляется в общей коллекции</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="color: var(--gray); margin-top: 16px;">
+                    <i class="fas fa-clock"></i> Среднее время рассмотрения: 1-2 рабочих дня
+                </p>
+                <a href="recipes.html" class="btn btn-secondary" style="margin-top: 16px;">
                     <i class="fas fa-book-open"></i> Посмотреть все рецепты
                 </a>
             </div>
@@ -173,7 +204,7 @@
         </div>
     </footer>
 
-    <script>
+        <script>
         document.getElementById('recipe-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -182,21 +213,29 @@
                 position: fixed;
                 top: 20px;
                 right: 20px;
-                background: var(--primary);
+                background: linear-gradient(135deg, #4ECDC4, #2D3436);
                 color: white;
                 padding: 20px 24px;
                 border-radius: var(--radius);
                 box-shadow: var(--shadow);
                 z-index: 1000;
                 animation: slideIn 0.3s ease;
+                max-width: 400px;
             `;
             
             alertDiv.innerHTML = `
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <i class="fas fa-check-circle" style="font-size: 24px;"></i>
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <i class="fas fa-clock" style="font-size: 24px; margin-top: 2px;"></i>
                     <div>
-                        <h4 style="margin: 0 0 4px 0;">Рецепт отправлен!</h4>
-                        <p style="margin: 0; opacity: 0.9;">Спасибо за ваш вклад в CookBook.</p>
+                        <h4 style="margin: 0 0 4px 0; font-size: 16px;">Рецепт отправлен на рассмотрение!</h4>
+                        <p style="margin: 0; opacity: 0.9; font-size: 14px; line-height: 1.4;">
+                            Спасибо за ваш рецепт! Наша команда модераторов проверит его, 
+                            и он будет добавлен в коллекцию CookBook в ближайшее время.
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 12px; opacity: 0.8;">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Обычно проверка занимает 1-2 рабочих дня</span>
+                        </div>
                     </div>
                 </div>
             `;
@@ -206,7 +245,7 @@
             setTimeout(() => {
                 alertDiv.style.animation = 'slideOut 0.3s ease';
                 setTimeout(() => alertDiv.remove(), 300);
-            }, 5000);
+            }, 7000);
             
             this.reset();
         });
